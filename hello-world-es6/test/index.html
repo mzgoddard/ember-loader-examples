@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/mocha/mocha.css" type="text/css" media="screen">
+    <script src="/mocha/mocha.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/testem.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/bundle.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      Ember.$(function() {
+        mocha.run();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <div id="ember-testing"></div>
+  </body>
+</html>
