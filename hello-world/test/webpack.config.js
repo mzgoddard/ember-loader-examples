@@ -6,5 +6,3 @@ module.exports.output = {
   path: __dirname + '/tmp',
   filename: 'bundle.js'
 };
-module.exports.resolve.alias['ember-mocha-adapter'] =
-  'ember-mocha-adapter/adapter';
