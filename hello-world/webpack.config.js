@@ -1,3 +1,7 @@
+const webpack = require('webpack');
+
+const ResolverPlugin = webpack.ResolverPlugin;
+
 module.exports = {
   context: __dirname,
   entry: __dirname + '/main.js',
@@ -13,10 +17,10 @@ module.exports = {
   },
   resolve: {
     modulesDirectories: ['./bower_components', './node_modules'],
-    alias: {
-      ember: 'ember/ember',
-      handlebars: 'handlebars/handlebars',
-      jquery: 'jquery/dist/jquery'
-    }
   },
+  plugins: [
+    new ResolverPlugin(
+      new ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+    )
+  ],
 };
